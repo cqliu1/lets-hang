@@ -8,12 +8,20 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
+	<div id="map"></div>
 	</div>
+	<button id="clear">Clear</button>
 
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 	<script type="text/javascript" src="assets/javascript/meetup.js"></script>
+
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE38Ju_63kC2mFECPNzaYLynJ4AuPhlUk&callback=initMap">
+    </script>
 	<script type="text/javascript" src="assets/javascript/maps.js"></script>
+
+	
 </body>
 </html>
