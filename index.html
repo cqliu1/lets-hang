@@ -2,18 +2,54 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Let's Hang</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-	<div class="container">
+
+	<div class="container-fluid">
+
+			<aside class="col-md-3">
+			<h1><strong>Let's Hang</strong></h1>
+					<form>
+						<div class="form-group">
+							<label id="zip-code-header">Zip Code</label>
+							<input class="form-control" id="zip-code-input" placeholder="Zip Code">
+						</div>
+
+						<div class="form-group">
+							<label id="radius-header">Radius</label>
+							<input class="form-control" id="radius-input" placeholder="Radius">
+						</div>
+
+						<div class="form-group">
+							<label id="key-words-header">Key Words</label>
+							<input class="form-control" id="key-words-input" placeholder="Key Words">
+						</div>
+					</form>
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="clear" class="btn btn-clear">Clear</button>
+			</aside>
+
+
+			<div id="map" class="col-md-9 pull-right">
+				<img src="assets/images/citymap_phoenix_az.gif" height=600 width=800 />
+				<footer><small>&copy; Copyright 2017, George / Omar / Catherine</small></footer>
+			</div>
+
+	
+
 	</div>
 
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 	<script type="text/javascript" src="assets/javascript/meetup.js"></script>
 	<script type="text/javascript" src="assets/javascript/maps.js"></script>
+
 </body>
+
 </html>
