@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 /* BEGIN CSS, CUSTOM AND MEDIA QUERIES */
 
@@ -57,41 +57,9 @@ label {
 	color:#D0D0D0;
 }
 
-#map {
-    height: 400px;
-    width: 100%;
-}		
+	
 
-=======
-/* BEGIN CSS, CUSTOM AND MEDIA QUERIES */
 
-body {
-	background-color:#d0d0d0;
-	overflow:hidden;
-}
 
-#map {
-	padding-top:40px;
-	padding-left:60px;
-}
 
-.pull-right {
-	left:55px;
-}
 
-h1 {
-	text-align:center;
-}
-
-form {
-	border:solid 0.25px;
-	border-color:#b0b0b0;
-	border-radius:5px;
-	height:400px;
-	line-height:50px;
-}
-
-footer {
-	text-align:center;
-}
->>>>>>> b5a900f5643728ee59c061e84432b183daeab02d
