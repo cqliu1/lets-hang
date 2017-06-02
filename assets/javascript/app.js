@@ -1,1 +1,3 @@
-$("#clear").on("click", clearMap);
+$("#clear").on("click", function(){
+	
+});
