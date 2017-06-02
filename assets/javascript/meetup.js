@@ -1,7 +1,7 @@
 //google API key
 var apiKeyGoogle = "AIzaSyCE38Ju_63kC2mFECPNzaYLynJ4AuPhlUk";
 //meetup API key
-var apiKeyMeetUp
+var apiKeyMeetUp = "7180b838194c635e3776241c137644";
 
 //Clear button for search fields
 $("#clear").on("click", function() {
