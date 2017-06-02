@@ -27,6 +27,8 @@ function addMarker(latitude,longitude) {
 			map: map
 	});
 
+	// add code for info window here
+
 	// stores new marker in marker array
 	markers.push(marker);
 
@@ -46,3 +48,4 @@ function clearMap() {
 }
 
 $("#clear").on("click", clearMap);
+
