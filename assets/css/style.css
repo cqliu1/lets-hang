@@ -1,3 +1,4 @@
+
 /* BEGIN CSS, CUSTOM AND MEDIA QUERIES */
 
 body {
@@ -54,3 +55,9 @@ button {
 label {
 	color:#D0D0D0;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}		
+
