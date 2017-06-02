@@ -1,0 +1,56 @@
+/* BEGIN CSS, CUSTOM AND MEDIA QUERIES */
+
+body {
+	overflow:none;
+	background-image:url('C:\/Users\/NEOPHOENIX7\/lets-hang\/assets\/images\/logo.jpg');
+}
+
+#map {
+	padding-top:40px;
+	padding-left:60px;
+}
+
+.pull-right {
+	left:55px;
+}
+
+h1 {
+	text-align:center;
+	font-size:48px;
+	font-style:italic;
+	color:#FFF8DC;
+	text-shadow: 2px 2px #202020;
+}
+
+.form-group {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+form {
+	height:400px;
+	line-height:50px;
+}
+
+footer {
+	text-align:center;
+	color:white;
+}
+
+aside {
+	position:relative;
+	top:3em;
+	border-style:solid;
+	border-width:5px;
+	border-radius:5px;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 40%,rgba(0,0,0,0.6) 70%), url('C:\/Users\/NEOPHOENIX7\/lets-hang\/assets\/images\/city.jpg');
+}
+
+button {
+	position:relative;
+	bottom:1em;
+}
+
+label {
+	color:#D0D0D0;
+}
