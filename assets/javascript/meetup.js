@@ -1,5 +1,7 @@
 // Here we construct our URL
 function meetUpAjax (){
+	clearMap();
+
 	//google API key
 	var apiKeyGoogle = "AIzaSyCE38Ju_63kC2mFECPNzaYLynJ4AuPhlUk";
 	//meetup API key
@@ -26,8 +28,8 @@ function meetUpAjax (){
 		var results = response.results;
 		latitude = results[0].geometry.location.lat;
 		longitude = results[0].geometry.location.lng;
-		console.log("lat:",latitude);
-		console.log("long:",longitude);
+		console.log("lat:", latitude);
+		console.log("long:", longitude);
 
 		// var coordinates = {
 		// 	lat: latitude, 
@@ -35,8 +37,8 @@ function meetUpAjax (){
 		// };
 
 		//Meetup AJAX
-		queryURL = "https://api.meetup.com/fine/events?&text=" + keyWords +"&lat="+ latitude+"&lon="+ longitude+"&radius="+radius;
-	    console.log("Meetup API:",queryURL);
+		queryURL = "https://api.meetup.com/find/events?key=" + apiKeyMeetUp + "&text=" + keyWords +"&lat="+ latitude+"&lon="+ longitude+"&radius="+radius;
+	    console.log("Meetup API:", queryURL);
 	    $.ajax({
 	    	url: queryURL,
 	   		method: "GET",
@@ -44,6 +46,11 @@ function meetUpAjax (){
 	    }).done(function(response) {
 	        console.log(queryURL);
 	        console.log(response);
+	        var data = response.data;
+	        for(var i = 0;i<10;i++){
+	        	console.log(data[i]);
+	        	addMarker(data[i].group.lat,data[i].group.lon);
+	        }
 		});
 	});
 }
