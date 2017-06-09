@@ -1,9 +1,10 @@
 var map;	 	// refers to map
 var bounds;		// stores boundaries of the map
-// var coordinates = [{lat: -34.397, lng: 150.644},{lat: -40, lng: 160},{lat: 0, lng: 20}];
-var markers = []; // store locations
+var markers = []; // store locations 
 var infoContentWindow = []; // store information to be displayed in info window
 var apiKey = "AIzaSyCE38Ju_63kC2mFECPNzaYLynJ4AuPhlUk";
+
+var contents = 'snazzy';
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
@@ -12,22 +13,25 @@ function initMap() {
 	});
 
 	bounds = new google.maps.LatLngBounds();
-
-	// for(var i = 0; i < coordinates.length; i++) {
-	// 	addMarker(coordinates[i].lat,coordinates[i].lng);
-	// }
 }
 
-function addMarker(latitude,longitude) {
-	var location = new google.maps.LatLng(latitude,longitude);
+function addMarker(event) {
+	var location = new google.maps.LatLng(event.group.lat,event.group.lon);
 	bounds.extend(location);
 	// place new marker on map
 	var marker = new google.maps.Marker( {
 			position: location,
-			map: map
+			map: map		
 	});
 
-	// add code for info window here
+	var infoWindow = new SnazzyInfoWindow({
+		marker: marker,
+		content: `
+			<p CLASS="this">
+				${contents}
+			</p>
+		`
+	});
 
 
 	// stores new marker in marker array
@@ -47,6 +51,3 @@ function clearMap() {
 	// empty markers array
 	markers = [];
 }
-
-$("#clear").on("click", clearMap);
-

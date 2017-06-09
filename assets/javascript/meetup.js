@@ -49,7 +49,7 @@ function meetUpAjax (){
 	        var data = response.data;
 	        for(var i = 0;i<10;i++){
 	        	console.log(data[i]);
-	        	addMarker(data[i].group.lat,data[i].group.lon);
+	        	addMarker(data[i]);
 	        }
 		});
 	});
