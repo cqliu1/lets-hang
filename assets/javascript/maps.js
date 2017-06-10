@@ -26,11 +26,7 @@ function addMarker(event) {
 
 	var infoWindow = new SnazzyInfoWindow({
 		marker: marker,
-		content: `
-			<p CLASS="this">
-				${contents}
-			</p>
-		`
+		content: "<a href='"+event.link+"'><h1>"+event.name+"</h1>"
 	});
 
 
