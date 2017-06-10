@@ -37,7 +37,7 @@ function meetUpAjax (){
 		// };
 
 		//Meetup AJAX
-		queryURL = "https://api.meetup.com/find/events?key=" + apiKeyMeetUp + "&text=" + keyWords +"&lat="+ latitude+"&lon="+ longitude+"&radius="+radius;
+		queryURL = "https://api.meetup.com/find/groups?key=" + apiKeyMeetUp + "&text=" + keyWords +"&lat="+ latitude+"&lon="+ longitude+"&radius="+radius+"&order=most_active&page=10";
 	    console.log("Meetup API:", queryURL);
 	    $.ajax({
 	    	url: queryURL,
@@ -47,7 +47,7 @@ function meetUpAjax (){
 	        console.log(queryURL);
 	        console.log(response);
 	        var data = response.data;
-	        for(var i = 0;i<10;i++){
+	        for(var i = 0;i<data.length;i++){
 	        	console.log(data[i]);
 	        	addMarker(data[i]);
 	        }

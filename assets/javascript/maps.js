@@ -4,8 +4,6 @@ var markers = []; // store locations
 var infoContentWindow = []; // store information to be displayed in info window
 var apiKey = "AIzaSyCE38Ju_63kC2mFECPNzaYLynJ4AuPhlUk";
 
-var contents = 'snazzy';
-
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 	  center: {lat: 33.4484, lng: -112.0740},
@@ -15,8 +13,8 @@ function initMap() {
 	bounds = new google.maps.LatLngBounds();
 }
 
-function addMarker(event) {
-	var location = new google.maps.LatLng(event.group.lat,event.group.lon);
+function addMarker(group) {
+	var location = new google.maps.LatLng(group.lat,group.lon);
 	bounds.extend(location);
 	// place new marker on map
 	var marker = new google.maps.Marker( {
@@ -26,7 +24,9 @@ function addMarker(event) {
 
 	var infoWindow = new SnazzyInfoWindow({
 		marker: marker,
-		content: "<a href='"+event.link+"'><h1>"+event.name+"</h1>"
+		content: (group.key_photo === undefined ? "" : ("<div class='text-center'><img class='group-img' src='"+group.key_photo.photo_link) +"'></div><br>")
+				+ "<a href='"+group.link+"'><h3>"+group.name+"</h3></a>" 
+				+ (group.description === undefined ? "<p>Click the link find out more.</p>" : group.description)
 	});
 
 
