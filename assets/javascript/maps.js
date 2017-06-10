@@ -25,7 +25,7 @@ function addMarker(group) {
 	var infoWindow = new SnazzyInfoWindow({
 		marker: marker,
 		content: (group.key_photo === undefined ? "" : ("<div class='text-center'><img class='group-img' src='"+group.key_photo.photo_link) +"'></div><br>")
-				+ "<a href='"+group.link+"'><h3>"+group.name+"</h3></a>" 
+				+ "<a href='"+group.link+"' target='_blank'><h3>"+group.name+"</h3></a>" 
 				+ (group.description === undefined ? "<p>Click the link find out more.</p>" : group.description)
 	});
 
